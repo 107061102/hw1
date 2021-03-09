@@ -28,19 +28,19 @@ with open(cwb_filename) as csvfile:
 target_data = []
 target_data_tmp = list(filter(lambda item: item['HUMD'] != '-99.000' and item['HUMD'] != '-999.000', data))
 
-if sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0A880') == 0: data = 'None'
+if len(list(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0A880')) == 0: data = 'None'
 else: data = sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0A880')
 target_data.append(['C0A880',data])
-if sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0F9A0') == 0: data = 'None'
+if len(list(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0F9A0')) == 0: data = 'None'
 else: data = sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0F9A0')
 target_data.append(['C0F9A0',data])
-if sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0G640') == 0: data = 'None'
+if len(list(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0G640')) == 0: data = 'None'
 else: data = sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0G640')
 target_data.append(['C0G640',data])
-if sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0R190') == 0: data = 'None'
+if len(list(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0R190')) == 0: data = 'None'
 else: data = sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0R190')
 target_data.append(['C0R190',data])
-if sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0X260') == 0: data = 'None'
+if len(list(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0X260')) == 0: data = 'None'
 else: data = sum(float(item['HUMD']) for item in target_data_tmp if item['station_id'] == 'C0X260')
 target_data.append(['C0X260',data])
 
